@@ -1,0 +1,25 @@
+spec_version: "0.1.0"
+name: "git-kbcurator"
+version: "0.1.0"
+description: "Autonomous Support Ticket Resolution Summarizer & Knowledge Base Runbook Synthesizer"
+framework: "opengap"
+authors:
+  - name: "masood-mashu"
+    email: "masoodmashu03@gmail.com"
+license: "Apache-2.0"
+
+runtime:
+  language: "python"
+  version: ">=3.10"
+  timeout: 120
+
+tags:
+  - customer-support
+  - knowledge-base
+  - runbook-synthesis
+  - technical-documentation
+  - passport-challenge
+
+metadata:
+  passport_id: "aps-kbcurator-01"
+  passport_category: "Customer support"

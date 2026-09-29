@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "detect_duplicate_articles",
+  "description": "Calculates semantic cosine similarity against published knowledge base articles",
+  "type": "object",
+  "properties": {
+    "similarity_check_json": {
+      "type": "string",
+      "description": "JSON with candidate_title and existing_titles list"
+    }
+  },
+  "required": [
+    "similarity_check_json"
+  ]
+}

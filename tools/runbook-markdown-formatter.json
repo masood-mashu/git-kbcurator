@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "format_runbook_markdown",
+  "description": "Formats troubleshooting guide into standard Markdown with code blocks",
+  "type": "object",
+  "properties": {
+    "steps_json": {
+      "type": "string",
+      "description": "JSON with title and steps list"
+    }
+  },
+  "required": [
+    "steps_json"
+  ]
+}

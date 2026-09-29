@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "summarize_ticket_resolution",
+  "description": "Extracts problem symptom and verified root-cause resolution from ticket thread",
+  "type": "object",
+  "properties": {
+    "ticket_thread_text": {
+      "type": "string",
+      "description": "Full resolved ticket transcript text"
+    }
+  },
+  "required": [
+    "ticket_thread_text"
+  ]
+}

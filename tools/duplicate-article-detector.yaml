@@ -1,0 +1,14 @@
+name: "duplicate-article-detector"
+description: "Calculates semantic cosine similarity against published knowledge base articles"
+version: "0.1.0"
+runtime:
+  language: "python"
+  entrypoint: "duplicate_article_detector.py"
+parameters:
+  type: "object"
+  properties:
+    similarity_check_json:
+      type: "string"
+      description: "JSON with candidate_title and existing_titles list"
+  required:
+    - "similarity_check_json"

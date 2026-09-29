@@ -1,14 +1,18 @@
-name: "runbook-markdown-formatter"
+name: runbook-markdown-formatter
+version: 1.0.0
 description: "Formats troubleshooting guide into standard Markdown with code blocks"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "runbook_markdown_formatter.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     steps_json:
-      type: "string"
+      type: string
       description: "JSON with title and steps list"
   required:
-    - "steps_json"
+    - steps_json
+implementation:
+  type: script
+  path: runbook_markdown_formatter.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

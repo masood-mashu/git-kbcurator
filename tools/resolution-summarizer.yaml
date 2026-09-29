@@ -1,14 +1,18 @@
-name: "resolution-summarizer"
+name: resolution-summarizer
+version: 1.0.0
 description: "Extracts problem symptom and verified root-cause resolution from ticket thread"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "resolution_summarizer.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     ticket_thread_text:
-      type: "string"
+      type: string
       description: "Full resolved ticket transcript text"
   required:
-    - "ticket_thread_text"
+    - ticket_thread_text
+implementation:
+  type: script
+  path: resolution_summarizer.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true
